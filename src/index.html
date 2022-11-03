@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bloople RSS Feed</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+html	{
+	/* This is for the Powered by rss2html element.  Leave at 0pt to hide.*/
+  font-family: 'book antigua';
+	font-size: 0pt;
+}
+body{
+	width: 550px;
+	margin: auto;
+  background-color: #888
+}
+body > h1{
+	font-family: 'book antigua';
+  text-align: center;
+}
+h4{
+	font-family: 'book antigua';
+  color: orangered;
+	margin-bottom: 0;
+	font-size: 22pt;
+}
+
+a:link{
+	font-family: 'book antigua';
+	/*color: #0860db;*/
+  color: #000;
+  text-shadow: 1px 1px 2px #FFF;
+
+}
+h2+a:link{
+	font-family: 'book antigua';
+	font-weight: bold;
+}
+h3{
+	font-family: 'book antigua';
+  margin-top: 0;
+	margin-bottom: 0;
+	font-size: 20pt;
+}
+p{
+	font-family: 'book antigua';
+  margin: 0;
+  font-size: 20pt;
+  color: #FFF;
+  text-shadow: 1px 1px 2px #000;
+
+}
+output h1 {
+	background-color: orangered;
+	text-indent: 5px;
+	color:white;
+	font-size: 2pt;
+}
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <div id="result"><script src="//rss.bloople.net/?url=https%3A%2F%2Fwww.vox.com%2Frss%2Findex.xml&showtitle=false&type=js"></script>
+</div>
+</body>
+<!-- partial -->
+  <script>
+    $( document ).ready(function() {
+    ReloadData()
+    setInterval(function(){ReloadData()}, 1000);
+});
+
+function ReloadData(){
+     $( "#result" ).load( "https://example.com", function() {});   
+}
+  </script>
+</body>
+</html>
